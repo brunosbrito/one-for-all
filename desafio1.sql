@@ -18,6 +18,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
       id INT PRIMARY KEY AUTO_INCREMENT,
       nome VARCHAR(300) NOT NULL,
       album_id INT NOT NULL,
+      duracao INT NOT NULL,
       FOREIGN KEY (album_id) REFERENCES albuns(id)
   ) engine = InnoDB;
 
@@ -74,18 +75,18 @@ VALUES
 ('I Put A Spell On You', 6);
 
 INSERT INTO 
-SpotifyClone.musicas(nome, album_id)
+SpotifyClone.musicas(nome,duracao, album_id)
 VALUES
-('BREAK MY SOUL', 1),
-('VIRGO’S GROOVE', 1),
-('ALIEN SUPERSTAR', 1),
-('Don’t Stop Me Now', 2),
-('Under Pressure', 3),
-('Como Nossos Pais', 4),
-('O Medo de Amar é o Medo de Ser Livre', 5),
-('Samba em Paris', 6),
-('The Bard’s Song', 7),
-('Feeling Good', 8);
+('BREAK MY SOUL', 279, 1),
+('VIRGO’S GROOVE', 369, 1),
+('ALIEN SUPERSTAR', 116, 1),
+('Don’t Stop Me Now', 203, 2),
+('Under Pressure', 152, 3),
+('Como Nossos Pais', 105, 4),
+('O Medo de Amar é o Medo de Ser Livre', 207, 5),
+('Samba em Paris', 267, 6),
+('The Bard’s Song', 244, 7),
+('Feeling Good', 100, 8);
 
 INSERT INTO 
 SpotifyClone.planos(nome, valor)
